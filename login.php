@@ -82,7 +82,7 @@ if(isset($_POST['login']))
 
                         <div class="form-group text-center m-t-30">
                             <div class="col-xs-12">
-                                <button class="btn btn-info btn-bordred btn-block waves-effect waves-light" name="login" type="submit">Hyr</button>
+                                <button class="btn btn-info btn-bordred btn-block" name="login" type="submit">Hyr</button>
                             </div>
                         </div>
                     </form>
