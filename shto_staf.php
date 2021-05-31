@@ -53,7 +53,7 @@ if ($_SESSION['user_group'] == "Super Admin"):
                                                     $conn1->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                                             
                                                     // prepare sql and bind parameters
-                                                     $stmt1 = $conn1->prepare('INSERT INTO users (user_first_name,user_last_name,user_email,user_pass,position,user_kategori,user_img,login_status,created) VALUES(:firstname,:lastname,:email,md5(:password),:position,:role,:img_user,:status,:date_create)');
+                                                     $stmt1 = $conn1->prepare('INSERT INTO users (user_first_name,user_last_name,user_email,user_pass,position,user_kategori,user_img,login_status,created) VALUES(:firstname,:lastname,:email,sha256(:password),:position,:role,:img_user,:status,:date_create)');
                                             
                                                     $stmt1->bindParam(':firstname', $firstname);
                                                     $stmt1->bindParam(':lastname', $lastname);
